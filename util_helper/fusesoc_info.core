@@ -1,0 +1,25 @@
+CAPI=2:
+
+name: AFRL:utility:util_helper:1.0.0
+description: various helper functions in header files for verilog.
+
+filesets:
+  src:
+    files:
+      - src/util_helper_math.vh
+    file_type: verilogSource
+  
+  tb:
+    files:
+      - tb/tb_helper.v
+    file_type: verilogSource
+    
+targets:
+  default:
+    filesets: [src]
+  
+  sim:
+    default_tool: icarus
+    filesets: [src, tb]
+    toplevel: tb_helper
+    
