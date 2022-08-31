@@ -1,12 +1,13 @@
 CAPI=2:
 
-name: AFRL:utility:util_helper:1.0.0
+name: AFRL:utility:helper:1.0.0
 description: various helper functions in header files for verilog.
 
 filesets:
   src:
     files:
-      - src/util_helper_math.vh
+      - src/util_helper_math.vh:
+          is_include_file: true
     file_type: verilogSource
   
   tb:
