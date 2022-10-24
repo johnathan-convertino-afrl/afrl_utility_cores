@@ -34,6 +34,7 @@
 * util_helper_math.vh ... functions written in C syntax for clarification.
   * int clogb2(value) ... will return the log base 2 of the argument (value), rounded up to the nearest integer.
   * int cmax(max1, max2) ... will return the number that is the max of the arguments max1, max2.
+  * int abs(value) ... will return the absolute value of a number.
   
 #### TB
 
