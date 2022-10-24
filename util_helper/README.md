@@ -37,7 +37,7 @@
   
 #### TB
 
-* tb_helper_math.v
+* tb_helper.v ... test all util_helper_xxx.vh functions.
   
 ### fusesoc
 
