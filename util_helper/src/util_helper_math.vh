@@ -28,17 +28,13 @@
 // ***************************************************************************
 // ***************************************************************************
 
-`timescale 1ns/100ps
-
 `ifndef __util_helper_math
 `define __util_helper_math
-
-module util_helper_math;
 
 //copied from the IEEE 1364-2001 Standard
 //clogb2 will return the log base 2 of the argument, rounded up to the nearest integer.
 function integer clogb2;
-  input [31:0] value;
+  input integer value;
   begin
       value = value - 1;
       for (clogb2 = 0; value > 0; clogb2 = clogb2 + 1) begin
@@ -49,8 +45,8 @@ endfunction
 
 //find the max of two numbers
 function integer cmax;
-  input [31:0] max1;
-  input [31:0] max2;
+  input integer max1;
+  input integer max2;
   begin
     //if they are equal, return max2 as the max.. cause what does it matter?
     if(max1 > max2) begin
@@ -61,6 +57,15 @@ function integer cmax;
   end
 endfunction
 
-endmodule
+function integer abs;
+  input integer value;
+  begin
+    if(value < 0) begin
+      abs = value * -1;
+    end else begin
+      abs = value;
+    end
+  end
+endfunction
 
 `endif
