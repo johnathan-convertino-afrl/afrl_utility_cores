@@ -28,8 +28,8 @@
 // ***************************************************************************
 // ***************************************************************************
 
-`ifndef __util_helper_math
-`define __util_helper_math
+//`ifndef __util_helper_math
+//`define __util_helper_math
 
 //copied from the IEEE 1364-2001 Standard
 //clogb2 will return the log base 2 of the argument, rounded up to the nearest integer.
@@ -68,4 +68,4 @@ function integer abs;
   end
 endfunction
 
-`endif
+//`endif
